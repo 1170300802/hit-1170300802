@@ -39,11 +39,19 @@ public class Ladder {
   public int getLabel() {
     return label;
   }
+  @Override
   public boolean equals(Object obj) {  
     if(obj instanceof Ladder) {
       obj = (Ladder)obj;
       return (this.label == obj.getLabel());
     }
     return false;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + label;
+    return result;
   }
 }
