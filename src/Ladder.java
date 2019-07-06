@@ -39,5 +39,11 @@ public class Ladder {
   public int getLabel() {
     return label;
   }
-  
+  public boolean equals(Object obj) {  
+    if(obj instanceof Ladder) {
+      obj = (Ladder)obj;
+      return (this.label == obj.getLabel());
+    }
+    return false;
+  }
 }
